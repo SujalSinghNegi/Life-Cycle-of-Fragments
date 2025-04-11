@@ -7,10 +7,14 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Button
 import android.widget.Toast
+import androidx.navigation.NavController
+import androidx.navigation.Navigation
 
 
 class BlankFragment : Fragment() {
+
     override fun onAttach(context: Context) {
         super.onAttach(context)
         Log.d("TAG", "onAttach: View Created")
@@ -22,6 +26,10 @@ class BlankFragment : Fragment() {
         Toast.makeText(requireContext(),"onCreate", Toast.LENGTH_SHORT).show()
     }
 
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+    }
+
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
@@ -29,6 +37,7 @@ class BlankFragment : Fragment() {
         // Inflate the layout for this fragment
         Log.d("TAG", "onCreateView: View Created")
         Toast.makeText(requireContext(),"onCreateView", Toast.LENGTH_SHORT).show()
+
         return inflater.inflate(R.layout.fragment_blank, container, false)
     }
 
