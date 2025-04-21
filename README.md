@@ -2,17 +2,20 @@
 
 ## Step1
 ### Inside the Build gradle
-    ```
+    
+    
     implementation(libs.androidx.preference)
     val nav_version = "2.8.9"
     implementation("androidx.navigation:navigation-fragment:$nav_version")
     implementation("androidx.navigation:navigation-ui:$nav_version")
-    ```
+    
+
 
 
   ## Step2
 
   ### in the activiy_main.xml
+  
   ```
  <FrameLayout
         android:id="@+id/frame"
